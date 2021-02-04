@@ -9,9 +9,13 @@ $font-family-sans-serif:    "Inter",  system-ui, -apple-system, "Segoe UI", Robo
 
 html {
 	box-sizing:border-box;
+	margin: 0;
 	.header {
 		padding: 4.6em;
-		margin: 4.6em;
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content:space-between;
 		.hero-desc {
 			line-height: 1;
 		}
@@ -21,17 +25,18 @@ html {
 		.hero-region{
 			margin: 1.5em 0 2em;
 		}
-		.software-available{
-
-		}
+	}
 }
-
-
 // Option class
-}
+
 .hover-white:hover{
 	background-color: black;
 	color: white !important;
+}
+.hover-black:hover{
+	background-color: white !important;
+	color: black !important;
+	border: 1px solid black !important;
 }
 .shadow-btn-violet{
 	box-shadow: 8px 8px 0 #a883f8;
