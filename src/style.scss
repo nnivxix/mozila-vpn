@@ -27,11 +27,38 @@ html {
 		}
 	}
 	.feature{
+		.container{
+			.row{
+				div{
+					z-index: 0;
 
+				}
+				div:nth-child(odd)::after{
+					background: #f9f9fa;
+					display: block;
+					position: absolute;
+					z-index: -1;
+					left: 24;
+					top:24;
+				}
+			}
+		}
 	}
 	.faq {
 
 		}
+	.cta{
+		min-height: 40vh;
+		.btn-cta{
+			width: 40% !important;
+			a{
+				color:dimgray;
+			}
+		}
+	}
+	.footer{
+		min-height: 30vh;
+	}
 
 }
 // Option class 
