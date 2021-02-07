@@ -29,8 +29,13 @@ html {
 	.feature{
 
 	}
+	.faq {
+
+		}
+
 }
 // Option class 
+
 
 .hover-white:hover{
 	background-color: black;
@@ -53,5 +58,13 @@ html {
 .zilla {
 	font-family: 'Zilla Slab', serif;
 }
-
+.shadow-btn {
+	box-shadow: 5px 5px  black;
+}
+button .arrow::before{
+	transform: rotate(90deg);
+}
+button.collapsed .arrow::before{
+	transform: rotate(0deg);
+}
 
