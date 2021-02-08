@@ -10,6 +10,7 @@ $font-family-sans-serif:    "Inter",  system-ui, -apple-system, "Segoe UI", Robo
 html {
 	box-sizing:border-box;
 	margin: 0;
+	scroll-behavior: smooth;
 	.header {
 		padding: 4.6em;
 		min-height: 100vh;
@@ -115,3 +116,25 @@ button.collapsed .arrow::before{
 	transform: rotate(0deg);
 }
 
+@media  (max-width: 575.98px) { 
+	html{
+		 .header{
+		padding: 0;
+		.hero-title{
+			font-size: 1.75em;
+		}
+		.software-available{
+			font-size: .8em;
+		}
+	}
+	.cta{
+		.btn-cta{
+			width: 70% !important;
+		}
+		.trademark{
+			font-size: 0.8em;
+		}
+	}
+	}
+
+ }

@@ -5,7 +5,7 @@ node_modules
 
 # file
 test.js
-
+slide-show-w3c.html
 # local env files
 .env.local
 .env.*.local
