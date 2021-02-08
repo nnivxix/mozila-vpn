@@ -16,8 +16,28 @@ html {
 		display: flex;
 		flex-direction: column;
 		justify-content:space-between;
+		.fade{
+			-webkit-animation-name: fade;
+			-webkit-animation-duration: 1s;
+			animation-name: fade;
+			animation-duration: 1s;
+		}
+		@-webkit-keyframes fade {
+			from {opacity: .4} 
+			to {opacity: 1}
+		}
+		@keyframes fade {
+			from {opacity: .4}
+			to {opacity: 1}
+		}
+		.slides{
+			max-width: 480px;
+		}
 		.hero-desc {
 			line-height: 1;
+		}
+		.hero-title{
+			font-size: 3.5em;
 		}
 		.hero-subtitle {
 			margin: 1.2em 0;
