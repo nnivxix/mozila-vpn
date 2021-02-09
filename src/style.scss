@@ -7,13 +7,13 @@ $font-family-sans-serif:    "Inter",  system-ui, -apple-system, "Segoe UI", Robo
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap/scss/_variables";
 
+//general css
 html {
 	box-sizing:border-box;
 	margin: 0;
 	scroll-behavior: smooth;
 	.header {
 		padding: 4.6em;
-		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
 		justify-content:space-between;
@@ -37,9 +37,6 @@ html {
 		.hero-desc {
 			line-height: 1;
 		}
-		.hero-title{
-			font-size: 3.5em;
-		}
 		.hero-subtitle {
 			margin: 1.2em 0;
 		}
@@ -48,25 +45,25 @@ html {
 		}
 	}
 	.feature{
+		margin-bottom: 3em;
 		.container{
-			.row{
-				div{
-					z-index: 0;
-
-				}
-				div:nth-child(odd)::after{
-					background: #f9f9fa;
-					display: block;
+			.box-feature:nth-child(odd){
+				background-color: #ededf0;
+				right: -10px;
+				.inner-box:after{
+					content: "";
 					position: absolute;
-					z-index: -1;
-					left: 24;
-					top:24;
+					outline: 3px solid black;
+					top: -20px;
+					right: 20px;
+					width: 100%;
+					height: inherit;
+					z-index: 1;
 				}
 			}
 		}
 	}
 	.faq {
-
 		}
 	.cta{
 		min-height: 40vh;
@@ -80,11 +77,8 @@ html {
 	.footer{
 		min-height: 30vh;
 	}
-
 }
 // Option class 
-
-
 .hover-white:hover{
 	background-color: black;
 	color: white !important;
@@ -116,18 +110,74 @@ button.collapsed .arrow::before{
 	transform: rotate(0deg);
 }
 
-@media  (max-width: 575.98px) { 
+@media (min-width: 768px) { 
 	html{
-		 .header{
+		.header{
+			width: 75%;
+			margin: 0 auto;
+			.hero{
+			.hero-desc{
+				margin: 4em 3em;
+			.hero-title{
+				font-size: 3.5em;
+			}
+			}
+		}
+		}
+		.feature{
+			width: 75%;
+			margin: 0 auto 6em auto;
+			border-bottom: 5px solid black;
+			.container{
+				.box-feature{
+					.inner-box{
+						img{
+							width: 50%;
+						}
+					}
+				}
+			}
+		}
+		.faq{
+			.faq-container{
+				width: 75%;
+			}
+		}
+	}
+}
+@media  (max-width: 767px) { 
+	html{
+		.header{
 		padding: 0;
-		.hero-title{
-			font-size: 1.75em;
+		width: 100%;
+		.hero{
+			.hero-desc{
+				margin: 1em;
+			.hero-title{
+				font-size: 1.75em;
+			}
+			}
 		}
 		.software-available{
 			font-size: .8em;
+			}
 		}
-	}
-	.cta{
+		.feature{
+			width: 90%;
+			margin: 0 auto 4em auto;
+			padding: 0 5px;
+			border-bottom: 5px solid black;
+			.container{
+				.box-feature{
+					.inner-box{
+						img{
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+		.cta{
 		.btn-cta{
 			width: 70% !important;
 		}
@@ -135,6 +185,13 @@ button.collapsed .arrow::before{
 			font-size: 0.8em;
 		}
 	}
-	}
+	.faq{
+		width: 90%;
+		margin: 0 auto;
+		.faq-container{
+			width: 100%;
 
+		}
+	}
+	}
  }
